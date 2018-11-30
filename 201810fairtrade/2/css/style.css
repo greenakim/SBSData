@@ -1,0 +1,239 @@
+body {
+  background-color: #ffffff;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 50px;
+  position: center; }
+
+::selection {
+  background: #191716;
+  color: #efe8dc;
+  text-shadow: none;  }
+
+::-moz-selection {
+  background: #191716;
+  color: #efe8dc;
+  text-shadow: none;  }
+
+::-webkit-selection {
+  background: #191716;
+  color: #efe8dc;
+  text-shadow: none;  }
+
+.www {
+  display: block; }
+.mmm {
+  display: none;  }
+
+/*div {
+  width: 100%; }*/
+section {
+  position: relative;
+  min-height: 10vw;  }
+
+.ui.segment {
+  background: none; }
+.ui.button {
+  background-color: #eaeaea;  }
+.ui.button:focus {
+  background-color: #807f7b;  }
+.ui.button:hover {
+  background-color: #ff971e;  }
+.ui.pagination.manu .item {
+  display: inline-block;  }
+input[type="radio"]: checked+label.ui.button {
+  background-color: #eaeaea;
+  color: #403f3d; }
+
+
+.coverBox {
+  margin: 0;
+  padding: 0;  }
+.description-box p {
+  text-align: center;
+  margin: auto;
+  padding-top: 45vh;
+  width: 910px; }
+
+.large {
+  font-family: "Spoqa Han Sans";
+  font-size: 27px;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+  letter-spacing: -2.5px; }
+.medium {
+  font-family: "Spoqa Han Sans";
+  font-size: 16px;
+  letter-spacing: -1.4px;
+  font-weight: 400;
+  line-height: 140%; }
+.small {
+  font-family: "Spoqa Han Sans";
+  font-size: 14px;
+  letter-spacing: -1px;
+  line-height: 100%
+  font-weight: 400; }
+
+.bold {
+  font-weight: 800; }
+#legendText {
+  /*background-color: #EDEDED;*/
+  text-align: right;
+  margin-right: 50; }
+
+.black {
+  color: #333231; }
+.ivory {
+  color: #efe8dc; }
+.gray {
+  color: #999492; }
+.blackbg {
+  color: #191716; }
+.red {
+  color: #8c0000; }
+
+
+.responsiveImg {
+  max-width: 100%;
+  height: auto;
+  left: 0;  }
+.blankDiv {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0; }
+
+
+/*Graph Style*/
+
+
+
+.trianglepointer {
+  fill: #999492;    }
+
+html { font-size: 62.5%; } 
+
+body {
+  font-size: 1rem;
+  font-family: 'Spoqa Han Sans', sans-serif;
+  font-weight: 400;
+  fill: #8C8C8C;
+  text-align: center; }
+
+.dayLabel {
+  font-size: 1.3rem;
+  fill: #898989;
+  letter-spacing: -0.5px;
+  font-weight: 300;    }
+
+.timeLabel {
+  font-weight: 500;
+  font-size: 1.5rem;
+  fill: #898989;
+  letter-spacing: -0.2px;    }
+
+.tooltip {
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+  line-height: 2rem;
+  fill: #898989;
+  text-align: left;    }
+
+.axis path, .axis tick, .axis line {
+  fill: none;
+  stroke: none;      }
+
+.legendTitle {
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+  fill: #4F4F4F;    }
+        
+        /*//////*/
+#headerbar {
+  text-align: left; }
+
+#footerbar {
+  background-color: #EFE8DC;
+}
+
+#contentBody {
+  height: 100%; }
+
+#contentBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+
+@media screen and (max-width: 639px) {
+  body {
+  text-align: left;
+    width: 100%;
+    overflow-x: visible;
+  }
+
+#contentBox {
+  width: 100%;
+  margin: 4%;   }
+
+#graphbox p {
+  width: 90%;  }
+
+.www {
+  display: none; }
+.mmm {
+  display: block;  }
+
+#graphtext {
+  width: 96%;
+  padding: 4%;  }
+
+.blankblank {
+  width: 100%;
+  height: 20px; }
+
+.large {
+  font-family: "Spoqa Han Sans";
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -2.5px; }
+.medium {
+  font-family: "Spoqa Han Sans";
+  font-size: 14px;
+  /*text-align: left;*/
+  letter-spacing: -1px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  line-height: 190%; } 
+.small {
+  font-family: "Spoqa Han Sans";
+  font-size: 14px;
+  letter-spacing: -1px;
+  font-weight: 400;   }
+
+.dayLabel {
+  font-size: 0.6rem;
+  fill: #898989;
+  letter-spacing: -0.5px;
+  font-weight: 300;    }
+.timeLabel {
+  font-weight: 500;
+  font-size: 1rem;
+  fill: #898989;
+  letter-spacing: -0.2px;    }
+
+
+#footerbar {
+  padding: 14% 4% 10% 4%;   }
+#fteamname {
+  color: #898989; }
+#footerbar p {
+  font-family: "Spoqa Han Sans";
+  font-size: 14px;
+  letter-spacing: -1.4px; 
+}
+
+}
+
+
