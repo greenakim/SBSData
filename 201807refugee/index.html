@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" http-equiv="content-type" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>SBS마부작침: '난민 문제, 이것부터 보고 보자' 최초공개 대한민국 난민 보고서</title>
+	<meta property="og:image" content="http://img.sbs.co.kr/newimg/news/20180709/201203483.jpg">
+	<link rel="stylesheet" type="text/css" href="css/semantic.css">
+	<link rel="stylesheet" type="text/css" href="css/template.css">
+	<link rel="stylesheet" href="css/style.css?ver=8">
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto+Condensed:300,400" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="lib/aos.css" media="screen" />
+	<script src="lib/aos.js"></script>
+
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" rel="stylesheet">
+	<script src="leaflet.timeline.js"></script>
+
+	<link rel="stylesheet" href="css/leafletTimeline.css">
+	<link rel="stylesheet" href="css/barChart.css">
+
+
+	
+</head>
+
+<body>
+	<header id="headerbar">
+		<a href="http://news.sbs.co.kr/"><img src="http://img.sbs.co.kr/newimg/news/20170718/201071799.png" alt="" class="sbslogo"></a>
+		<a href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114"><img src="http://img.sbs.co.kr/newimg/news/20170714/201070268.png" alt="" class="mabulogo"> </a>
+		<img src="http://img.sbs.co.kr/newimg/news/20170406/201037558.png" alt="" class="social" id="twitter">
+		<img src="http://img.sbs.co.kr/newimg/news/20170406/201037559.png" alt="" class="social" id="facebook">
+	</header>
+
+	<div id="progress">
+		<div id="bar"></div>
+	</div>
+
+	<section id="coverBox">
+		<img src="http://img.sbs.co.kr/newimg/news/20180708/201203211.png" id="titleimg" class="responsiveImg" data-aos="fade-down" data-aos-duration="2000">
+		<img src="http://img.sbs.co.kr/newimg/news/20180708/201203212.png" id="titleimgM" data-aos="fade-down" data-aos-duration="2000" class="responsiveImg">
+			<div id="mousebox" class="mouse" >
+				<div id="wheel" class="wheel">
+				</div>
+			</div>
+<!-- 			<div id="navigator">
+				<a data-target="#article1">1: 2018 난민의 모든 것,<br>All about 난민 </a>
+				<a data-target="#article2">2: 한국에서 난민 인정받기</a>
+			</div> -->
+	</section>
+
+	<section id="article1">
+		<div class="articlebox" data-aos="fade-up" data-aos-duration="2000">
+			<p class="gray titleNumber thin">1</p>
+			<p class="gray display_1 extrabold">2018 난민의 모든 것,<br>All about 난민
+			</p>
+			<p class="gray medium paragraph">  2018년 6월, 대한민국 제주특별자치도와 대한민국으로부터 8,000km 떨어진 중동의 예멘, 그리고 제주를 찾아온 예멘 난민. 유럽과 미국에서는 이미 오래전부터 사회적 논란을 낳아온 난민 문제가 대한민국에 본격적으로 상륙했다. SBS 데이터저널리즘팀 [마부작침]은 대한민국의 난민에 대해 집중적으로 분석한다. 국내 언론 중에서는 처음으로 유엔 난민기구 UNHCR의 2000~2017년 난민 자료와 우리나라 법무부의 1994~2017년 자료를 전수 분석했다. 특히 그동안 공개되지 않았던 법무부의 연도별 난민 신청·인정 사유와 신청·인정자의 성별 분류 자료, 심사 단계별 인정 자료를 입수해 들여다봤다. 데이터를 통해 지금 이 순간 한국에서의 난민 실태를 톺아봄으로써 난민 이슈에 대한 독자 여러분의 판단을 돕고자 한다.</p>
+		</div>
+	</section>
+
+	<section id="article1_0" data-aos="fade-up" data-aos-duration="1000">
+		<div class="articlebox">
+			<p class="lightskyblue display_2 thin" style="text-align: center;">
+				“이 지구별 위에서 인간은 이래저래 난민일 수 밖에 없어.”<br>
+				─ 표명희, <어느 날 난민>
+			</p>
+		</div>
+	</section> 
+
+	<section id="article1_1">
+		<div class="articlebox">
+			<p class="charcoal display_2">대한민국은 난민의 나라였다
+			</p>
+			<p class="gray medium paragraph">  1919년 4월 11일, 중국 상하이. 9년 전에 일본에 나라를 빼앗긴 뒤, 조국을 떠나온 대한제국의 망명객들이 옛 '제국'의 이름을 따 정부를 세웠다. 조국을 떠날 수밖에 없었던 그들은 '난민'이었고, 그들이 세운 망명정부의 이름은 '대한민국 임시정부'였다. 2018년 지금 대한민국 정부는 바로 그 난민들의 망명정부를 계승하고 있다.</p>
+			<p class="gray medium paragraph">1950년 12월, 유엔은 전쟁으로 폐허가 된 한국의 구호를 위해 유엔 한국재건단(UN Korea Reconstruction Agency, UNKRA)을 구성했다. 운크라(UNKRA)가 바로 현재 유엔 난민기구의 모태다.</p>
+			<p class="gray medium paragraph">대한민국은 난민의 나라였다. 1992년, 한국은 '난민의 지위에 관한 협약'에 가입했다. 2012년엔 아시아 최초로 독립적인 난민법도 만들었다. 난민법 제정에는 중국에게 탈북자를 북한에 강제 송환하지 않도록 난민 대우해줄 것을 압박하겠다는 당시 정부여당의 의지가 깔려 있었다. 그럼에도 이제까지 난민은 한국인에겐 남의 나라 이슈였다.</p>
+			<p class="gray medium paragraph">2018년, 제주로부터 날아온 돌발 질문. "우리에게 난민은 어떤 존재인가?"</p>
+			<p class="gray medium paragraph">(*편집자 주: 유엔 난민기구 자료와 법무부 자료 가운데 같은 항목인데도 수치가 다른 경우가 있다. 유엔 난민기구 자료는 특정 수치가 1~4명일 때는 해당 난민이 노출될 수 있다며 별표로 나타내는 등 일부 표시 방식에 차이가 있고 난민 신청 단계를 더 세분화해 분류하고 있기 때문이다. 반면 법무부 자료에는 유엔 자료에 없는 한국 난민의 세부 현황이 포함돼 있다. 독자의 이해를 돕기 위해 필요한 곳에는 자료 출처를 따로 적었다.)</p>
+		</div>
+	</section>
+
+	<section id="article1_2">
+		<div class="articlebox">
+			<p class="gray display_1 Demilight" style="letter-spacing: -2.5px;" data-aos="fade-up" data-aos-duration="1500">지금, 세계 난민</p>
+			<p class="gray medium paragraph">지구별 난민의 수는 현재 6,850만 명이다. 유엔 난민기구(UNHCR, UN High Commissioner for Refugees)가 집계한 현재의 전 세계 난민과 실향민 수가 그렇다. 대한민국 인구보다 1,500만 명이나 많다. 2017년 한 해에도 179개 나라에서 난민 1,994만 명이 새로 발생했는데 82%인 1,630만 명은 상위 10개국에 집중돼 있다.</p>
+		</div>
+	</section>
+
+    <section id="ww" >
+    	<div class="graphtitle">
+			<p class="orange display_4">세계 난민 발생 현황 (1980~2017년)</p>
+		</div>
+        <div class="graphbox">
+        	<div id="map" style="width: 80%; height: 30vw; margin-left:10%; margin-right: 10%; margin-bottom: 3vw;"></div>
+        </div>
+        <div class="articlebox">
+			<p class="medium paragraph" style="color: #645e53;">(하단의 가로 스크롤을 움직이면 1980년부터 2017년까지 각 나라별 난민 발생 수가 원의 크기로 표현됩니다. 원이 클수록 난민 발생 수가 많은 것입니다. 각 원을 마우스로 클릭하면 발생한 난민 수를 볼 수 있습니다. 특정 나라와 지역을 좀 더 자세히 보려면 지도를 확대해 움직여볼 수 있습니다.)</p>
+		</div>
+    </section>
+
+	<section id="article1_4">
+		<div class="graphbox">
+			<p class="gray display_3 bold">난민 최다 배출국 TOP10</p>
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203349.png" id="ww" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203342.png" id="mm" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg">
+		</div>
+
+		<div class="articlebox">
+			<p class="gray medium paragraph">2010~2017년 최다 난민 배출국은 시리아다. 2017년 최다 난민 배출국도 시리아였다. 지난해 난민의 수는 631만 명. 2011년 시리아 내전이 발생한 이후 세계 어느 나라보다 가파르게 난민의 수가 늘었다. 시리아는 이전의 난민 발생 1위 국가였던 아프가니스탄을 2014년부터 제쳤다. 2위로 밀린 아프가니스탄에 이어 3위는 남수단이다. 내전 발발로 2013년 11만 명의 난민이 발생했고 이후 평화협정 덕분에 잠시 주춤했지만, 다시 무력충돌이 잦아지면서 지난해엔 244만 명의 난민이 생겼다. 2013년과 비교하면 무려 21배다.</p>
+			<p class="gray medium paragraph">공식 '난민'이 되려면 심사를 통해 '인정'받아야 한다. 난민 인정 대신 일시 체류만 허용하는 경우도 있다. 난민 인정률은 난민 심사를 신청해 심사가 끝난 사람들 가운데 공식적으로 난민으로 인정받은 사람들의 비율이고, 난민 보호율은 난민으로 공식 인정된 사람들에 인도적 체류자까지 더해 산출한 수치이다.</p>
+		</div>
+	</section>
+
+    <section id="article1_6">
+		<div class="articlebox">
+			<p class="charcoal display_2">OECD 37개국의 평균 난민 인정률은 24.8%…<br>한국은 35위로 뒤에서 3번째
+			</p>
+			<p class="gray medium paragraph">유엔 난민기구 자료에 따르면, 세계 190개국의 최근 18년(2000~2017년) 평균 난민 인정률은 29.9%, 보호율은 44.2%이다. '난민 지위에 관한 의정서' 가입 145개국으로 좁히면, 인정률은 28.1%, 보호율은 42.5%이다. 경제협력개발기구 OECD 37개 회원국 기준으로는 인정률 24.8%, 보호율 38.0%이다. 선진국으로 갈수록 인정·보호율이 낮아지는 것 같지만 이는 사실 '평균의 함정'이기도 하다. 국가 간 편차가 크기 때문이다. 한국의 인정률은 3.5%로 OECD 국가 중 35위, 보호율도 10.7%로 역시 35위이다.</p>
+		</div>
+	</section>
+
+    <section id="ww">
+    	<div class="graphtitle">
+			<p class="orange display_4">세계 190개국 난민 인정 현황 (2000~2017년)
+			</p>
+		</div>
+		<div class="graphbox" id="chart"></div>
+				<div class="articlebox" id="Blank"></div>
+		<div class="articlebox">
+			<p class="medium paragraph" style="color: #645e53;">(우상단의 스크롤을 움직여 2000년부터 2017년까지 세계 190개국별로 누적 난민 인정자 수를 찾아볼 수 있습니다. 인정자 수가 가장 많은 나라부터 내림차 순으로 배치돼 있습니다. 독일의 경우 689,961명입니다.)</p>
+		</div>
+    </section>
+    <section id="mm">
+    	<div class="graphbox">
+			<p class="gray display_3 bold">OECD 난민 인정 현황</p>
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203421.png" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+    </section>
+
+	<section id="article1_8">
+		<div class="articlebox">
+			<p class="gray medium paragraph">최근 18년간 난민을 가장 많이 받아들인 나라는 독일이다. 난민 인정 68만 9,961명으로 미국(40만 2,745명), 프랑스(25만 3,692명), 영국(22만 4,718명) 등을 제치고 1위를 차지했다. 독일의 난민 인정률은 31.7%로 OECD 평균보다 6.9%p 높다. 독일은 2016년에만 26만 명을 받아들여 정점을 찍었지만 2017년엔 14만 7,590명으로 10만 명 이상 줄었다.</p><p class="gray medium paragraph">
+			난민 인정률이 가장 높은 국가는 터키다. 인정률 88.1%. 터키는 지난 18년간 14만 9,887명을 난민으로 받아들였다. 터키 외에 50% 이상의 인정률을 기록한 국가는 멕시코(55.7%), 캐나다(51.8%)다. 터키는 유럽연합 EU와 난민 협정을 맺어 유럽으로 향하던 난민 상당수를 수용하는 '유럽의 방파제' 역할을 하고 있기 때문에 인정률이 특히 높은 것으로 보인다. '터키가 유럽의 목줄을 쥐고 있다'는 표현도 그래서 나온다.</p><p class="gray medium paragraph">
+			하지만 유럽을 중심으로 난민·이민자 출신이 테러나 범죄에 연루된 사건이 계속 늘어나면서 독일을 비롯해 '난민 수용 정책'을 적극적으로 펴던 정권들이 위기를 맞고 있다. 독일의 2017년 난민 인정자 수가 전년보다 10만 명 넘게 줄어든 것도 이런 맥락으로 보인다. 난민 문제를 '인권'보다는 '안보' 관점으로 봐야 한다는 주장이 힘을 얻고 있기 때문이다. EU 회원국 간 갈등도 커졌는데 정상들이 지난 6월 말, 합동난민심사센터를 건립하고 회원국 내 난민 이동을 제한하기로 합의하면서 갈등은 일단 잦아드는 분위기다.</p><p class="gray medium paragraph">
+			OECD 회원국 가운데 한국보다 난민 인정률이 낮은 나라는 이스라엘과 일본뿐이다. 이중 한국과 인접한 나라는 일본이다. 2017년 한국보다 2.1배 많은 12,874건의 난민 심사 완료가 이뤄졌지만, 난민으로 인정한 건 단 11명에 불과했다. 일본의 2017년 난민 인정률은 고작 0.1%, 보호율 0.4%다. 일본은 난민 수용에 극도로 소극적인 정책 기조를 유지하고 있다. 여기엔 자국 내 여러 문제에 난민 이슈를 추가하지 않으려는 속내가 있다.</p>
+		</div>
+	</section>
+
+	<section id="article1_9">
+		<div class="articlebox">
+			<p class="gray display_1 Demilight" style="letter-spacing: -2.5px;" data-aos="fade-up" data-aos-duration="1500">지금, 한국 난민</p>
+			<p class="gray medium paragraph">한국은 지난 1992년 '난민 지위에 관한 협약'에 가입했다. 2012년 아예 별도의 '난민법'을 제정해 2013년부터 시행하기 시작했다. 법 시행 당시 박근혜 정부는 "난민 신청자의 절차적 권리가 강화되고, 인권 국가로서 국제적 위상이 한층 높아질 것으로 기대한다"라고 홍보했다. 제도적 기반은 갖췄지만 시리아, 아프가니스탄, 남수단 등 주요 난민 발생국과는 멀리 떨어져 있는 데다 종교, 문화 등 차이도 커서 난민 신청을 위해 한국을 찾는 이는 많지 않았고, 난민이 주요 사회적 이슈로 떠오르지도 않았다.</p>
+		</div>
+	</section>
+
+    <section id="article1_10">
+		<div class="articlebox">
+			<p class="charcoal display_2">제주 예멘인 대거 입국으로 난민 이슈 부상…<br>법무부 "올해 난민신청 18,000명 예상"
+			</p>
+			<p class="gray medium paragraph">그런데 무비자 입국이 가능한 제주에 올 들어 예멘인 5백여 명이 들어와 난민 신청을 하면서 한국에서도 난민 이슈가 급부상했다. '난민법 폐지' 등을 주장하는 청와대 국민청원에 64만 명 넘게 참여하는 등 갑론을박이 한창이다.</p>
+		</div>
+	</section>
+
+
+    <section id="article1_11">
+    	<div class="graphbox">
+		<p class="gray display_3 bold">난민 신청, 인정, 인도적 체류 현황</p>
+		<img src="http://img.sbs.co.kr/newimg/news/20180709/201203350.png" id="ww" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+		<img src="http://img.sbs.co.kr/newimg/news/20180709/201203344.png" id="mm" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg">
+	</div>
+
+		<div class="articlebox">
+			<p class="gray medium paragraph">한국이 난민 협약 가입에 따라 난민 신청을 받기 시작한 1994년엔 신청자가 단 5명이었다. 2017년엔 9,942명이 신청해 23년 만에 신청자 수는 1,988배 증가했다. 누적 신청자 수는 3만 2,733명이다(법무부 자료). 난민법 시행 이후 급증하는 추세라고 볼 수 있다. 지난 6월 19일, 법무부가 내놓은 보도자료의 제목은 '올해 난민 신청 18,000명 예상, 3년 내 12만 명 넘어설 것으로'이다. 난민 신청이 크게 늘어나는 만큼 심사를 더욱 엄정하게 하겠다는 내용이다.</p>
+		</div>
+	</section>
+
+	<section id="article1_13">
+		<div class="articlebox">
+			<p class="charcoal display_2">2001년 첫 한국 난민 탄생…<br>난민 인정률은 4% 수준
+			</p>
+			<p class="gray medium paragraph">첫 난민 인정자는 2001년에 나왔다. '1호 난민'은 에티오피아 출신 20대 전도사로, 반정부 단체 활동을 난민 사유로 인정받았다. 하지만 이 난민은 생활고에 시달리다 3년 만에 다른 나라로 떠나버렸다.</p>
+		</div>
+	</section>
+
+    <section id="article1_14">
+    	<div class="graphbox">
+			<p class="gray display_3 bold">연도별 난민 인정률·보호율<br>(2001~2017년)</p>
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203353.png" id="ww" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203346.png" id="mm" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg">
+		</div>
+
+		<div class="articlebox">
+			<p class="gray medium paragraph">이후 17년간(2001~2017년) 한국에서 난민으로 인정받은 건 유엔 자료 기준으로 708명이었다. 난민 인정률은 3.5%이다. 법무부 자료 기준으로는 792명, 4.1%이다. 스스로 신청을 철회한 이들까지 감안하면 인정률은 더 떨어진다. 세계 평균 인정률 29.9%에 비하면 낮은 수준이다. '인도적 체류자'까지 더한 난민 보호율 또한 세계 평균의 4분의 1 수준에 그친다. 찾아오는 난민 신청자 수도 적지만, 인정자 수가 적고, 인정률도 높지 않은 셈이다. 아이러니한 건, 한국 정부가 일본처럼 딱히 난민 수용에 소극적인 정책 기조 같은 걸 갖고 있던 것도 아닌데 이런 결과가 나왔다는 사실이다.</p>
+		</div>
+	</section>
+
+
+    <section id="article1_16">
+    	<div class="articlebox">
+			<p class="charcoal display_2">난민 신청자의 13%는 파키스탄인…점점 다양해지는 국적</p>
+		</div>
+    	<div class="graphbox">
+			<p class="gray display_3 bold">난민 신청자 국적 TOP10<br>(2000~2017년)</p>
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203351.png" id="ww" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203345.png" id="mm" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg">
+		</div>
+		<div class="articlebox">
+			<p class="gray medium paragraph">유엔 자료 기준으로 세계 97개 나라에서 온 3만 2,641명이 지난 18년간 한국에 난민으로 인정받겠다며 심사 신청을 했다. 신청자 수가 많았던 상위 10개국 출신이 전체의 64.7%, 2만 1,129명이었다. 39개 나라는 신청자의 수가 10명 이하였다. 가장 많은 신청자가 나온 국가는 파키스탄. 4,267명으로 전체 신청자의 13.1%에 달한다. 이어 중국(3,639명, 11.1%)과 이집트(3,244명, 9.9%), 나이지리아(1,826명, 5.6%), 카자흐스탄(1,810명, 5.5%) 순으로 신청자의 수가 많았다.</p>
+		</div>
+	</section>
+
+	<section id="article1_17">
+		<div class="articlebox">
+			<p class="charcoal display_2">신청 사유 1위는 '기타'…<br>인정자는 '0명</p>
+			<p class="gray medium paragraph">난민법에서 정의한 난민은 "인종, 종교, 국적, 특정 사회집단의 구성원인 신분 또는 정치적 견해를 이유로 박해를 받을 수 있는 외국인"이다. '특정 사회집단의 구성원'이란 주로 사회적 소수자를 가리킨다. 물론 '박해를 받을 수 있다고 인정할 충분한 근거가 있는 공포'라는 조건이 달려있다.</p>
+		</div>
+    	<div class="graphbox" id="ww" style="margin-left: 20%; margin-right: 20%;">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203354.png" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg" >
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203355.png" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000" >
+		</div>
+    	<div class="graphbox" id="mm">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203354.png" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg" >
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203355.png" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000" >
+		</div>
+	</section>
+
+	<section id="article1_18">
+    	<div class="graphbox">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203367.png" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203368.png" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg">
+		</div>
+		<div class="articlebox">
+			<p class="gray medium paragraph">난민 신청을 받기 시작한 1994년 이후 지금까지 가장 많았던 신청 사유는 정치적 견해, 인종, 종교적인 이유, 국적, 특정 사회집단 구성원 신분, 가족 결합 중 어느 것도 아닌 '기타'(31.6%)였다. 2008년까지 난민 신청 사유는 대체로 정치적 견해의 비중이 컸고 그 다음은 종교였지만, 2009년 이후 줄곧 '기타'가 수위를 차지했다. 법무부 관계자는 '기타'가 이렇게 많아진 데 대해 "가족 간 재산 분쟁이나 채무자 위협 등 사인간 위협을 신청 사유로 드는 경우가 많다"고 설명했다. 법무부가 볼 때 난민법에서 규정한 난민에 해당하지 않는데 신청했다는 말이 된다.</p>
+			<p class="gray medium paragraph">난민 인정 사유에서도 법무부의 이런 판단이 반영돼 있다. 24년간(1994~2017) 난민 인정 사유에서 가장 많았던 건 '가족 결합', 32.4%였다. 가족 중 1명이 난민 인정을 받으면 배우자와 미성년 자녀도 데려와 난민으로 인정받는 사례가 많은 것이다. 다음은 정치적 견해, 인종, 종교 순이었다. 신청 사유 1위인 '기타'는 24년 동안 단 1명도 난민으로 인정받지 못했다. 이는 '난민에 해당하지 않는데 신청했으니 인정할 수 없다'는 법무부 논리가 그대로 유지된 것으로 보인다.</p>
+		</div>	
+	</section>
+
+    <section id="article1_19">
+    	<div class="graphbox">
+		<p class="gray display_3 bold">난민 신청·인정 성별 현황<br> (1994~2017년)</p>
+		<img src="http://img.sbs.co.kr/newimg/news/20180709/201203358.png" id="ww" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+		<img src="http://img.sbs.co.kr/newimg/news/20180709/201203347.png" id="mm" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg">
+	</div>
+		<div class="articlebox">
+			<p class="gray medium paragraph">1994년 이후 누적 난민 신청자의 82.0%는 남성, 18.0%는 여성으로 4.6 대 1의 성비를 보였다. 2004년(68.9%)을 제외하고 24년 동안 남성 신청자의 비율이 70% 아래로 떨어진 일은 한 번도 없었다. 그러나 난민 인정자의 경우엔 2007년과 2016년에는 여성 인정자가 남성보다 약간이지만 많았다. 난민 인정 사유 1위가 '가족 결합'이라는 점을 고려하면 남편·아버지가 먼저 난민 인정을 받은 뒤 가족을 데려오는 경향, 내전 중 징집을 피해 모국을 떠나는 상당수가 남성이라는 점 등이 반영된 결과로 추정된다. 누적 난민 인정자는 남성 61.2%, 여성 38.8%로 1.6대 1의 성비를 보였다. 연령별로는 18~59세가 95.0%, 18세 미만과 60세 이상이 합쳐서 5.0%였다.</p>
+			<p class="gray medium paragraph">각 나라 난민의 성별, 연령별 구분이 명확하게 나온 유엔 자료는 확보할 수 없었다. 다만 OECD 국가 중 난민을 많이 받아들인 나라의 자료로 성별 경향성을 살펴보면 독일 1.7 대 1, 캐나다 1.2 대 1, 터키 1.5 대 1, 프랑스 1.4 대 1 등으로 남성의 비율이 대략 여성의 1.5배 수준이었다.</p>
+		</div>	
+	</div>
+	</section>
+
+	<section id="article1_20">
+		<div class="articlebox" data-aos="fade-right" data-aos-duration="1500">
+			<a href="http://bit.ly/2KRkuHr">
+				<p class="beige display_4" style="background-color: #E4572E; padding: 10px;">연도별 난민 신청·인정 사유,<br>연도별 난민 신청·인정자의 성별 분류 현황 데이터 보기 → </p>
+			</a>
+		</div>
+		<div class="articlebox">
+			<p class="gray medium paragraph">-한국이 이제까지 받아들인 난민의 수는 세계를 기준으로 보면 미미한 수준이다. 우리는 '난민'을 먼 나라 얘기로 여겨왔고, 실제로 상당 기간 이는 사실이었다.</p>
+		</div>
+	</section>
+
+
+
+	<section id="article2" data-aos="fade-up" data-aos-duration="2000">
+		<div class="articlebox">
+			<p class="gray titleNumber thin">2</p>
+			<p class="gray display_1 extrabold">한국에서 난민 인정받기</p>
+		</div>
+	</section>
+
+	<section id="article2_0" data-aos="fade-up" data-aos-duration="1000">
+		<div class="articlebox">
+			<p class="tan display_2 thin" style="text-align: center;">
+				“더 이상 기다리는 일 따윈 안 하겠다며 비장한 각오로 한국행을 택했건만, 이곳으로 오고도 여전히 기다림의 연속이었다. 어떤 때는 그것이 꼭 자신의 저주받은 운명 같았다.”<br>
+				─ 표명희, <어느 날 난민>
+			</p>
+		</div>
+	</section> 
+
+	<section id="article2_1">
+		<div class="articlebox">
+			<p class="gray display_1 Demilight" style="letter-spacing: -2.5px;">2018년 한국에서 난민 인정받기</p>
+			<p class="gray display_2">#1</p>
+			<p class="gray medium paragraph">에티오피아 출신 안다가추(가명)씨는 3년 전 한국에 와 난민 심사를 신청했다. 고국에서 야당 선거운동을 하고 반정부 시위에 참가했다는 이유로 경찰에 체포·구금되고 고문까지 받았는데 "돌아가면 박해받게 될 것이라는 공포의 근거로 충분하지 않다"며 난민 인정을 받지 못했다. 이의 신청을 했지만 결과는 마찬가지였다. 안다가추 씨는 난민 인권단체 도움을 받아 소송을 제기했고 법원은 안다가추 씨의 손을 들어줬다.</p>
+			<p class="gray medium paragraph">그러자 심사 당국인 법무부가 난민 불인정 처분이 적법했다며 항소했다. 2018년 4월 2심에서도 안다가추 씨가 승소했고 당국이 상고를 포기하면서 안다가추 씨는 비로소 난민 인정을 받을 수 있었다. 난민 신청한 지 3년 3개월, 2번의 심사와 2번의 재판을 거친 뒤였다.</p>
+		</div>
+		<div class="articlebox">
+			<p class="gray display_2">#2</p>
+			<p class="gray medium paragraph">방글라데시의 소수민족인 줌머족은 현 방글라데시 정부와 주류 민족의 탄압 때문에 상당수가 모국을 떠나야 했다. 방글라데시 국민의 80% 이상이 이슬람교를 믿지만, 줌머족은 불교 신자라는 점이 가장 큰 갈등 요인이다. 방글라데시 출신 난민 인정자 96명 중 줌머족은 절반이 넘는다. 줌머족에 대한 박해 상황은 국내에 비교적 잘 알려져 있고 경기도 김포에는 줌머족이 모여사는 작은 공동체도 생겼다.</p>
+			<p class="gray medium paragraph">줌머족인 차크마(가명) 씨도 한국 정착을 원하고 있지만 최근까지 난민 심사에서 3번 떨어졌고, 소송에서도 3번 패소했다. 자국에 가면 위협받는다는 차크마씨의 주장을 믿을 수 없다는 게 불인정 이유였다.</p>
+		</div>
+		<div class="articlebox">
+			<p class="gray medium paragraph">(*편집자 주: 안다가추씨와 차크마씨는 모두 가명입니다. 인터뷰에 응해준 두 분, 두 분의 조력자와 충분히 상의한 뒤 가명을 사용하기로 결정했습니다.)</p>
+		</div>
+	</section>
+
+	<section id="article3">
+		<div class="graphbox">
+			<IFRAME src="http://player.sbs.co.kr/SBSPlayer.jsp?cid=N1004830439&type=NEWS&mode=SHARE&custom_params=" class="moviebox" frameborder="0" scrolling="no"></IFRAME>
+		</div>
+	</section>
+	
+    <section id="article2_2">
+    	<div class="articlebox">
+			<p class="orange display_1 extrabold">난민 신청·심사 절차
+			</p>
+		</div>
+    	<div class="graphbox">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203412.png" id="ww" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000">
+			<img src="http://img.sbs.co.kr/newimg/news/20180709/201203348.png" id="mm" data-aos="fade-up" data-aos-duration="2000" class="responsiveImg">
+	</div>
+	</section>
+
+
+    <section id="article2_3">
+		<div class="articlebox">
+			<p class="charcoal display_2">한국에서 난민 인정받기 1단계: 10% 확률부터 뚫어라
+			</p>
+			<p class="gray medium paragraph">한국에서 난민으로 인정받으려면 먼저 심사 신청을 해야 한다. 2013년 난민법이 시행되면서 한국에 체류하고 있지 않았더라도 공항이나 항구 등 출입국항으로 들어와 입국 심사받을 때 난민 신청하는 게 가능해졌다. 이때는 난민 심사를 받을지부터 심사받는다. 일종의 사전 심사가 이뤄지는 것이다.</p>
+			<p class="gray medium paragraph">사전 심사 회부율은 낮다. 2013년부터 2017년까지 882명이 사전 심사를 받았는데 절반에도 못 미치는 413명, 46.8%만 통과했다. 469명은 본 심사도 못 받고 송환 대상이 됐다. 심사 회부율은 2013년엔 대상자의 59.3%였으나 2016년 32.6%, 2017년 단 10.7%, 21명만이 사전 심사를 통과했다. 사전 심사는 이의 신청도 불가능해 여기서 떨어진 신청자는 본국 강제 송환과 소송 중 하나를 선택해야 한다. 대개는 소송을 택하는데 그러면 결과가 나올 때까진 출국대기실에서 장기 체류해야 한다.</p>
+			<p class="gray medium paragraph">2014년 강제 송환이 결정된 신청자가 자살하는 사건이 발생한 것을 비롯해 열악한 대기실 환경 등 인권 문제가 제기되자 관련 조항 개정이 추진됐다. 2015년엔 사전 심사 회부율도 72.3%로 반짝 상승했다. 더불어민주당 원혜영 의원은 2015년, 사전심사 기준을 명확히 하고 이의신청 절차를 마련하는 내용의 난민법 개정안을 발의했고 국가인권위원회는 2016년, 법령 개선을 권고했다.</p>
+			<p class="gray medium paragraph">하지만 법은 아직 바뀌지 않았다. 오히려 난민 신청자가 급증하면서 출입국항 사전심사의 회부율은 더 낮아지는 추세다. 법무부는 불회부 사유가 무엇인지에 대해 '관리하고 있지 않다'는 이유로 공개하지 않고 있다.</p>
+		</div>
+	</section>
+
+    <section id="article2_4">
+    	<div class="graphbox">
+		<p class="gray display_3 bold">2017년 난민 심사</p>
+		<img src="http://img.sbs.co.kr/newimg/news/20180709/201203413.png" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000" id="ww">
+		<img src="http://img.sbs.co.kr/newimg/news/20180709/201203360.png" class="responsiveImg" data-aos="fade-up" data-aos-duration="2000" id="mm">
+	</div>
+	</section>
+
+    <section id="article2_5">
+		<div class="articlebox">
+			<p class="charcoal display_2">한국에서 난민 인정받기 2단계: 난민심사관 37명에게 달렸다
+			</p>
+			<p class="gray medium paragraph">사전심사를 통과하거나 국내 체류 중인 상태에서 난민 신청을 하면 1차 조사를 받을 수 있다. 1차 조사는 사전 서류조사와 면접조사로 이뤄진다. 담당은 각 출입국관리사무소 등에 소속된 난민심사관이다. 2018년 현재 전국에 37명이 배치돼 있다. 2015년엔 8명이었는데 그때에 비하면 5배 가까이 늘어난 셈이다.</p>
+			<p class="gray medium paragraph">하지만 신청자 수가 크게 증가한 데 비하면 심사관 수는 부족하다. 이 37명이 지난해 난민 신청 9,942건을 골고루 나눠 맡았다고 보면, 심사관 1명이 맡은 심사가 269건이나 된다. 휴일을 제하고 보면 하루 1명씩 심사하는 셈이다. 2018년 올해는 신청자 수만 1만 8,000명에 이를 것으로 법무부는 추정한다. 최근 제주에 예멘인 등 난민 신청자가 몰렸는데도 배치된 심사관은 단 1명뿐이라는 점이 보도되기도 했다. (정부는 제주 심사관을 우선 증원하기로 했다.)</p>
+			<p class="gray medium paragraph">법무부는 2017년의 경우 심사 결과가 나올 때까지 평균 소요시간이 7개월 정도라고 밝혔다. 7개월 기다려 면접 한 번 치르는 식이다. 2017년 심사 완료된 6,041건 기준으로 볼 때 1차에서 난민 인정을 받은 건 92건, 1.5%이다. 1994년부터 2017년까지 심사 완료는 1만 9,360건, 1차 심사에서 난민이 인정된 건 549건이다.</p>
+		</div>
+	</section>
+
+    <section id="article2_6">
+		<div class="articlebox">
+			<p class="charcoal display_2">한국에서 난민 인정받기 3단계: 난민위원회부터 법원까지
+			</p>
+			<p class="gray medium paragraph">1차 심사에서 인정받지 못하면 이의 신청할 수 있다. 법무부 난민위원회에서 2차 심사를 한다. 법무부 차관을 위원장으로 한 난민위원회는 변호사와 교수, 실국장급 공무원 등 15명으로 구성된다. 2017년 난민위원회는 6번 회의를 열었고 4,542건을 심사했다. 회의 한 번에 평균 757건 심사한 셈이다. 실무조사는 산하 분과위원회에서 한다지만 한 건 한 건 들여다보기 힘든 수준이다. 이렇다 보니 난민위원회 2차 심사에서 난민 인정받은 건 2017년에 24건, 심사 완료 건수 대비하면 0.40%이다. 1994~2017년 24년간 2차 심사에서 난민 인정을 받은 건 151건이었다.</p>
+			<p class="gray medium paragraph">2차 심사에서도 난민 인정을 못 받으면 90일 이내에 행정소송을 낼 수 있다. 행정법원의 1심, 고등법원 2심과 대법원 3심까지 합치면 3번의 기회가 더 있는 것이다. 이렇게 소송을 통해 난민으로 인정받은 경우는 2017년 5건, 역시 심사 완료 건수에 대비하면 0.08%이다. 1994~2017년 소송을 통한 난민 인정은 92건이었다.</p>
+		</div>
+	</section>
+
+	<section id="article2_7">
+		<div class="articlebox" data-aos="fade-right" data-aos-duration="1500">
+			<a href="http://bit.ly/2tYIvGj">
+				<p class="beige display_4" style="background-color: #E4572E; padding: 10px;">출입항만 사전심사 연도별 회부 현황, <br>난민 신청 단계별 인정 현황 데이터 보기 → </p>
+			</a>
+		</div>
+		<div class="articlebox">
+			<p class="gray medium paragraph">앞에 소개한 에티오피아 출신 안다가추 씨는 이 바늘구멍 같은 확률을 통과한 기적의 난민, 운좋은 난민이다. 반면 줌머인 차크마 씨는 6번의 기회를 모두 놓쳐 버린, 불운한 난민이다. 확률로 보면 차크마 씨 같은 이들이 월등히 많다.</p>
+			<p class="gray medium paragraph">난민 심사에 대한 법원 판결문에서 "난민 면접이 졸속으로 이뤄졌다"거나 "난민 면접 조서에 신청자에게 불리한 진술만 적혀 있다"는 등 심사 과정의 문제점에 대한 지적을 찾는 건 그리 어려운 일은 아니다. 신청자 수에 비해 현저히 적은 심사 인력으로 심사가 제대로 이뤄지길 기대하는 것 자체가 어불성설이다.</p>
+			<p class="gray medium paragraph">이런 심사 체계 속에서 저런 바늘구멍을 통과한 난민들만이 난민법에서 규정한 '난민'으로 인정받는 셈인데, 이게 과연 합리적인 상황인 걸까. 그들은 그저 지극히 운이 좋았던 이들 이상도 이하도 아닌 건 아닐까. 하필이면 이토록 난민으로 인정받기 어려운 한국을 택했던 나머지 97%가량은 과연 모두가 난민에 해당하지 않기 때문에 심사에서 떨어졌던 걸까. 그저 전반적으로 불운한 사람들이었던 건 아닐까. 이렇듯 난민 심사가 '복불복', 일종의 '로또'가 됐다면 이는 제도의 성공인가, 실패인가?</p>
+		</div>
+	</section>
+
+	<section id="article2_6">
+		<div class="articlebox">
+			<p class="charcoal display_2">난민에 대한 물음에 답하기 위하여
+			</p>
+			<p class="gray medium paragraph">난민법 폐지를 요구하는 청와대 청원 참여자가 64만 명이 넘었다. 조두순 출소 반대(615,354명), 빙상연맹 처벌(614,127명)을 제치고 역대 1위의 청원 규모를 기록했다. 한 여론조사기관의 제주 예멘 난민 수용 설문조사 결과는 찬성 37.4%, 반대 53.4%로 반대가 더 많았다. 6월 30일, 서울 광화문에서 열린 난민 반대 집회에는 주최 측 추산 1,000여 명이 참가했다. 상당수의 한국인들은 현행과 같은 방식의 난민 수용에 공감하지 않고 있다.</p>
+			<p class="gray medium paragraph">문화 충돌이나 사회적 불안을 우려한 난민 반대도 있다. 조혼이나 여성할례, 히잡, 일부다처제 같은 가부장적인 여성 억압의 관습을 지닌 것으로 알려진 무슬림 일부가 난민으로 들어오는 건 한국에 악영향을 미칠 것이라는 우려도 있고, 독일 등 유럽 일각에서 난민·이민자 범죄율이 높아지고 있는데 한국도 당장은 아니더라도 그런 상황에 직면할 것이며 피해는 주로 여성과 아이들에게 집중될 것이라는 걱정 등이 그렇다. 한국 난민신청자의 남녀 비율이 4.6 대 1로 남성에 치우쳐 있다는 점도 이런 우려를 강화시킨다.(인정자는 남녀 1.6 대 1이다.) 여기엔 한국 사회와 공권력에 대한 불신이 깔려 있다. 지금도 특히 여성은 불법 촬영 등 각종 범죄에서 제대로 보호받지 못한다고 느끼는데 난민까지 늘어나면 감당할 수 있겠냐는 주장도 나온다.</p>
+			<p class="gray medium paragraph">난민이 정말 한국 사회 현실에선 받아들일 수 없는 존재인지, 현행 법에 따라 수용한다면 어느 정도 규모가 적정한지, 난민 중에 과연 위험한 이들이 섞여 들어올 가능성은 없는지, 이를 위한 심사는 믿을 수 있는지, 즉, 우리에게 난민은 무엇인지, 2018년 제주에서 불거진 난민 이슈는 한국 사회 전체에 이런 질문을 사실상 처음으로 던졌다.</p>
+			<p class="gray medium paragraph">아직 누구도 모두가 만족하거나 수긍할 만한 답을 내놓지 못하고 있다. 마부작침의 이번 분석 또한 어떤 해답이 되기엔 부족하다. 다만 지금의 난민 심사는, 제대로 심사하기 어려운 구조라는 것, 그래서 '운'에 좌우될 우려가 있다는 점만은 분명하다. 한국에서 난민 인정받기가 '로또'가 되지 않도록 현행 난민 심사를 질적으로 개선해야 한다. 그리고 더 나아가 정부는 난민 수용에 대한 사회적 합의를 만들어 가는 작업을 시작해야 할 것이다.</p>
+			<p class="gray medium paragraph">※6월 29일, 한국 정부는 난민 심사 기간을 단축하는 내용을 핵심으로 하는 난민 대책을 발표했다. 이를 위해 난민심사관의 수를 늘리고 이의신청과 법원의 1심까지 담당할 난민심판원을 신설하며 제도 악용을 방지하기 위한 난민법 개정도 추진하겠다고 밝혔다. 이와 함께 한국이 국제사회의 일원으로 난민보호에 대한 책무를 이행해야 하는 위치에 있다면서도 국민 우려를 불식시킬 수 있는 방안 마련을 위해 고심하고 있다고 덧붙였다.</p>
+		</div>
+	</section>
+
+
+
+
+	    <footer id="footerbar">
+	        <div class="articlebox">
+	        	<a href="http://news.sbs.co.kr/news/newsPlusList.do?themeId=10000000114">
+		        	<p id="fteamname">SBS마부작침</p>				</a>
+					<p class="credit">도끼를 갈아 바늘을 만든다는 뜻으로 방대한 데이터와 정보 속에서 송곳 같은 팩트를 찾는 저널리즘을 지향합니다. 
+
+				 <br><br>심영구 기자 (so5what@sbs.co.kr)<br>
+				김학휘 기자 (hwi@sbs.co.kr)<br>
+				안혜민 기자·분석가 (hyeminan@sbs.co.kr)<br>
+				김그리나 디자이너·개발자 (greenaa@sbs.co.kr)<br>
+				인턴 : 윤현영
+	        </div>
+	    </footer>
+	    <script src="refugee.js"></script>
+	    <script src="geo.json"></script>
+</body>
+</html>

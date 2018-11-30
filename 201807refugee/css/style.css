@@ -1,0 +1,569 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+ /*font-family: 'Noto Sans KR', sans-serif;*/
+ /*font-family: 'Jeju Myeongjo', serif;*/
+
+
+body {
+	width: 100%;
+	padding-top: 50px;
+	overflow-x: hidden;
+	font-size: 3px;
+	background-color: #CEC1A3;
+	background-image: url(http://img.sbs.co.kr/newimg/news/20180622/201197290.png);
+	background-repeat: repeat;
+	background-position: center;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.
+.responsiveImg {
+	max-width: 100%;
+	height: auto;
+	left: 0;
+}
+
+::selection {
+	background: #39496C;
+	color: #CEC1A3;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #39496C;
+	color: #CEC1A3;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+	background: #39496C;
+	color: #CEC1A3;
+	text-shadow: none;
+}
+
+		.ui.segment {
+			background: none;
+		}
+
+		.ui.button {
+			background-color: #CEC1A3;
+		}
+
+		.ui.button:focus {
+			background-color: #E4572E;
+		}
+
+		.ui.button:hover {
+			background-color: #B72A32; 
+		}
+
+		.ui.pagination.manu .item {
+			display: inline-block;
+		}
+
+		input[type="radio"]: checked+label.ui.button {
+			background-color: #D9D0DE;
+			color: #CEC1A3;
+		}
+
+		section {
+			position: relative;
+			margin-bottom: 10vw;
+		}
+
+		.thin {
+			font-weight: 100;
+		}
+
+		.light {
+			font-weight: 300;
+		}
+
+		.DemiLight {
+			font-weight: 350;
+		}
+
+		.regular {
+			font-weight: 400;
+		}
+
+		.bold {
+			font-weight: 700;
+		}
+
+		.extrabold {
+			font-weight: 900;
+		}
+
+		.titleNumber {
+			font-size: 72px;
+			font-family: 'Roboto Condensed', sans-serif;
+			margin-bottom: 0;
+		}
+
+		.display_1 {
+			font-size: 48px;
+			/*font-size: 16rem;*/
+			letter-spacing: -0.035em;
+		}
+
+		.display_2 {
+			font-size: 30px;
+			/*font-size: 12rem;*/
+			letter-spacing: -0.06em;
+			font-family: 'Jeju Myeongjo', serif;
+			font-weight: 900;
+			margin-bottom: 10px;
+		}
+
+		.display_3 {
+			font-size: 24px;
+			/*font-size: 8rem;*/
+			letter-spacing: -0.08em;
+			font-weight: 700;
+		}
+
+		.display_4 {
+			font-size: 30px;
+			/*font-size: 12rem;*/
+			letter-spacing: -0.06em;
+			font-family: 'Jeju Myeongjo', serif;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+
+		.medium {
+			font-size: 18px;
+			/*font-size: 6rem;*/
+			letter-spacing: -0.04em;
+			line-height: 2em;
+			font-weight: 400;
+		}
+
+		.medium_s {
+			font-size: 15px;
+			/*font-size: 5rem;*/
+			letter-spacing: -0.02em;
+			font-weight: 400;
+		}
+
+		.graphtitle {
+			margin-bottom: 15px;
+			text-align: center;
+			font-weight: 400;
+		}
+
+/*COLOR PALLETE*/
+/*MAIN COLORS*/
+		.orange {
+			color: #E4572E;
+		}
+
+		.beige {
+			color: #C6B693;
+		}
+
+		.tan {
+			color: #BA9A74;
+		}
+
+		.charcoal {
+			color: #1E2D2F;
+		}
+
+		.gray {
+			color: #4C4C47;
+		}
+
+		.navy {
+			color: #003049;
+		}
+
+		.crimson {
+			color: #B72A32;
+		}
+
+		.ivory {
+			color: #F7DBA7;
+		}
+
+		.salmon {
+			color: #E5625E;
+		}
+
+		.black {
+			color: #071013;
+		}
+
+
+/*SUB COLORS*/
+		.green {
+			color: #558B6E;
+		}
+
+		.lightgreen {
+			color: #6E9887;
+		}
+
+		.yellow {
+			color: #FF7F11;
+		}
+
+		.lightorange {
+			color: #FF8C42;
+		}
+
+		.brown {
+			color: #BF3C1D;
+		}
+
+		.skyblue {
+			color: #258EA6;
+		}
+
+		.lightskyblue {
+			color: #729EA1;
+		}
+
+		.scarlet {
+			color: #FF3D40;
+		}
+
+		.coolblack {
+			color: #151E3F;
+		}
+
+		.bluegray {
+			color: #39496C;
+		}
+
+
+
+#progress {
+	width: 100%;
+	height:2px;
+	background-color: #C6B693;
+	overflow: hidden;
+	content: "";
+	display: table;
+	table-layout: fixed;
+	position: fixed;
+	top: 55;
+	left: 0;
+	z-index: 999;
+}
+
+#bar {
+	width: 0%;
+	height: 100%;
+	float: left;
+	max-width: 100%;
+	background-color: #E4572E;
+	z-index: 999;
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+
+
+		.mouse {
+			width: 24px;
+			height: 42px;
+			border-radius: 14px;
+			transform: none;
+			border: 2px solid rgba(228, 87, 46, 0.7);
+			margin:0px auto 0px auto;
+		}
+
+		.wheel {
+			width: 3px;
+			height: 3px;
+			display: block;
+			margin: 5px auto;
+			background: white;
+			position: relative;
+			border: 2px solid  rgba(228, 87, 46, 0.7);
+			-webkit-border-radius: 8px;
+			border-radius: 8px;
+
+			-webkit-animation: mouse-wheel 1.5s linear infinite;
+			-moz-animation: mouse-wheel 1.5s linear infinite;
+		}
+
+#coverBox {
+	width: 100%;
+	background-size: cover;
+	background-position: bottom;
+	background-image: url(http://img.sbs.co.kr/newimg/news/20180706/201202858.png);
+
+	z-index: 998;
+	background-repeat: no-repeat;
+	padding-bottom: 4.2vw;
+}
+
+
+#main {
+	width: 100%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+
+#titleimg {
+	width: 100%;
+	height: 100%-5px;
+	margin: 0 auto;
+	z-index: 1;
+	display: block;
+}
+
+#titleimgM {
+	display: none;
+}
+
+.responsiveImg {
+	max-width: 100%;
+	height: auto;
+	left: 0;
+}
+
+#ww {
+	display: block;
+}
+
+#mm {
+	display: none;
+}
+
+
+
+
+
+
+	.commodityButton, .commodityLabel { cursor:pointer; }
+	.route { fill: none; stroke: #E4572E; /*stroke-width: 2px; */}
+	.land { fill:#C6B693; }
+	svg { background: rgba(227,219,201,0); /*background: #E3DBC9;*/ }
+	.port { fill: #E4572E; /*stroke:#084081; stroke-width: 2px; */}
+	.source-port { fill: #FF7F11; /*stroke:#d94801; stroke-width: 2px; */}
+  	/*#graph1 {min-height: 80vw;}*/
+
+
+
+
+
+
+
+
+@-webkit-keyframes mouse-wheel {
+	0% { 
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-ms-transform: translate(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(6px);
+		-ms-transform: translateY(6px);
+		transform: translateY(6px);
+	}
+}
+
+@-moz-keyframes mouse-wheel {
+	0% { top: 1px; }
+	25% { top: 2px; }
+	50% { top: 3px; }
+	75% { top: 2px; }
+	100% { top: 1px; }
+}
+
+.titlebox {
+	width: 100%;
+}
+
+.articlebox {
+	width: 100%;
+	padding: 0 30%;
+	margin-bottom: 3vw;
+}
+
+.articlebox article {
+	width: 100%;
+}
+
+.graphbox {
+	width: 100%;
+	min-height: 30vw;
+	padding: 0 10%;
+}
+
+.moviebox {
+	width: 100%;
+	height: 45vw;
+	display: block;
+	margin: 0px auto 0px auto;
+	z-index: 1;
+		}
+
+@media screen and (max-width: 639px) {
+	body {
+		width: 100%;
+		overflow-x: hidden;
+	}
+
+	nav {
+		display: none;
+		width: 90%;
+		min-height: 450px;
+		padding: 70px 20px 0px 20px;
+		position: fixed;
+		top: 50px;
+		left: 0px;
+		background-color: #fff;
+		z-index: 900;
+	}
+
+	.moviebox {
+	width: 100%;
+	height: 52vw;
+	display: block;
+	margin: 0px auto 0px auto;
+	z-index: 1;
+		}
+
+	.navbar {
+		display: none;
+		z-index: 0;
+	}
+
+	.navbar a { 
+		display: none;
+	}
+
+
+.navigator a {
+	background-color: #BA9A74;
+	padding: 10px;
+	color: #C6B693;
+}
+
+
+
+		.titleNumber {
+			font-size: 72px;
+			font-family: 'Roboto Condensed', sans-serif;
+			margin-bottom: -3%;
+			padding-left: -3%;
+		}
+
+		.display_1 {
+			font-size: 30px;
+			/*font-size: 16rem;*/
+			letter-spacing: -0.035em;
+		}
+
+		.display_2 {
+			font-size: 24px;
+			/*font-size: 12rem;*/
+			letter-spacing: -0.06em;
+			font-family: 'Jeju Myeongjo', serif;
+			font-weight: 900;
+			margin-bottom: 10px;
+		}
+
+		.display_3 {
+			font-size: 20px;
+			/*font-size: 8rem;*/
+			letter-spacing: -0.08em;
+			font-weight: 700;
+		}
+
+		.display_4 {
+			font-size: 20px;
+			/*font-size: 12rem;*/
+			letter-spacing: -0.06em;
+			font-family: 'Jeju Myeongjo', serif;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+
+		.medium {
+			font-size: 16px;
+			/*font-size: 6rem;*/
+			letter-spacing: -0.08em;
+			line-height: 2em;
+			font-weight: 400;
+		}
+
+		.medium_s {
+			font-size: 14px;
+			/*font-size: 5rem;*/
+			letter-spacing: -0.02em;
+			font-weight: 400;
+		}
+
+		.graphtitle {
+			margin-bottom: 15px;
+			text-align: center;
+			font-weight: 400;
+		}
+
+
+		#main {
+			height: 100vh;
+		}
+
+/*		#mousebox {
+			display: none;
+		}*/
+
+		#coverBox {
+			height: 70vh;
+			width: 100%;
+			background-size: cover;
+			background-position: bottom;
+			/*background-image: url(  );*/
+			z-index: 998;
+			background-repeat: no-repeat;
+			padding-bottom: 0;
+		}
+
+		#titleimg {
+			display: none;
+		}
+
+		#titleimgM {
+			display: block;
+		}
+
+		#ww {
+			display: none;
+		}
+
+		#mm {
+			display: block;
+		}
+
+		section {
+			width: 100%;
+		}
+
+		.articlebox {
+			padding-bottom: 10%;
+			padding-left: 4%;
+			padding-right: 4%;
+		}
+		.graphbox {
+			width: 100%;
+			min-height: 30vw;
+			padding: 0 4%;
+}
+
+		#Blank {
+			display: none;
+		}
+}
